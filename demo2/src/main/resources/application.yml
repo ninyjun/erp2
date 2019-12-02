@@ -1,0 +1,14 @@
+application:
+  name: demo2
+
+server:
+  port: 8080
+
+debug: true
+
+worker:
+  taskurl: http://localhost:8080/api/
+  tasks:
+    - paytask
+    - ordertask
+    - canceltask

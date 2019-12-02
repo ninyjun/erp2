@@ -1,0 +1,43 @@
+application:
+  name: customer
+
+server:
+  port: 8080
+
+debug: false
+
+spring:
+  datasource:
+    db1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      jdbc-url: jdbc:mysql://10.211.55.5:3306/customer?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+    db2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      jdbc-url: jdbc:mysql://10.211.55.5:3306/sharedlib?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+
+  redis:
+    cluster:
+      nodes:
+      - 10.211.55.5:7001
+      - 10.211.55.5:7002
+      - 10.211.55.5:7003
+      jedis:
+        pool:
+          # 连接池最大连接数（使用负值表示没有限制）
+          max-active: 30
+          # 连接池最大阻塞等待时间（使用负值表示没有限制） 
+          max-wait: -1ms  
+          # 连接池中的最大空闲连接   
+          max-idle: 10
+            # 连接池中的最小空闲连接     
+          min-idle: 5      
+
+  http:
+    encoding:
+      charset: utf-8

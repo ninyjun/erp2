@@ -1,0 +1,16 @@
+application:
+  name: acctsvc
+
+server:
+  port: 8080
+spring:
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://10.211.55.5:3306/account?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+debug: false
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
