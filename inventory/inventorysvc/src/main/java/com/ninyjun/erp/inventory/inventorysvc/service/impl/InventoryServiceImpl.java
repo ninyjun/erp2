@@ -34,6 +34,8 @@ public class InventoryServiceImpl implements InventoryService {
         if (batchNo == null)
             ;// throw
 
+
+
         inout.setInventoryBatchNoId(batchNo.getInventoryBatchNoId());
         inout.setProductCode(inv.getProductCode());
         inout.setStorehouseCode(inv.getStorehouseCode());
