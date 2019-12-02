@@ -12,7 +12,7 @@
     <artifactId>erp</artifactId>
     <version>1.0.0</version>
     <name>erp</name>
-    <description>Demo project for Spring Boot</description>
+    <description>erp project for Spring Boot</description>
 
     <packaging>pom</packaging>
     <modules>
