@@ -51,7 +51,7 @@ public class InventoryServiceImpl implements InventoryService {
         inv.setAmount(inout.getAmount());
         ret = inventoryRepo.updateAmountByPrimaryKey(inv);
 
-        return inventoryRepo.selectByPrimaryKey(inout.getInventoryId());;
+        return inventoryRepo.selectByPrimaryKey(inout.getInventoryId());
     }
 
     @Override
